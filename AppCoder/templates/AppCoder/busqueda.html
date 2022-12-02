@@ -1,0 +1,17 @@
+{% extends 'AppCoder/padre.html' %} {% block contenidoQueCambia %}
+<h1>Buscar tarea por nombre</h1>
+<form action="/buscar/" method="get">
+  <div class="mb-3">
+    {% csrf_token %}
+    <table>
+      <input type="text" name="nombreBuscado" />
+    </table>
+  </div>
+
+  <!-- <button type="submit">Agregar</button> -->
+  <div class="d-flex">
+    <input type="reset" value="Cancelar" class="btn btn-secondary" />
+    <input type="submit" value="Buscar" class="btn btn-primary" />
+  </div>
+</form>
+{% endblock %}

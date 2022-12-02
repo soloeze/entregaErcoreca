@@ -1,0 +1,17 @@
+{% extends 'AppCoder/padre.html' %} {% block contenidoQueCambia %}
+<h1>Agregar personas del equipo</h1>
+<form action="" method="post">
+  <div class="mb-3">
+    {% csrf_token %}
+    <table>
+      {{ form }}
+    </table>
+  </div>
+
+  <!-- <button type="submit">Agregar</button> -->
+  <div class="d-flex">
+    <input type="reset" value="Cancelar" class="btn btn-secondary" />
+    <input type="submit" value="Guardar" class="btn btn-primary" />
+  </div>
+</form>
+{{mensaje}} {% endblock %}
